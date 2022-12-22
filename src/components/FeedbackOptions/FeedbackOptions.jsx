@@ -1,14 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FeedbackContainer, Button } from './FedbackOptions.styled';
-import { nanoid } from 'nanoid';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <FeedbackContainer>
       {options.map(option => (
         <Button
-          key={nanoid()}
+          key={option}
           onClick={() => onLeaveFeedback(option)}
           type="button"
         >
